@@ -1,0 +1,12 @@
+---
+interface Props {
+  def: string;
+}
+
+const { def } = Astro.props;
+const id = 'term-' + Math.random().toString(36).slice(2, 10);
+---
+<slot /><span class="tip"
+  ><input type="checkbox" id={id}
+  /><label for={id}>[?]</label
+  ><span class="tip-body">{def}</span></span>

@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import PubList from '../components/PubList.astro';
+import { getCollection } from 'astro:content';
+import { Content as HomeIntro } from '../content/home.mdx';
+
+const allPubs = (await getCollection('publications')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+const selectedPubs = allPubs.filter((p) => p.data.selected);
+---
+<Base title="Amar Shah" active="home">
+  <h1 class="name">Amar Shah<span class="sep">|</span><span class="hindi">अमर शाह</span><span class="sep">|</span><span class="urdu">عمار شاہ</span></h1>
+
+  <img
+    src="/lostcoast.png"
+    class="profile"
+    onmouseover="this.src='/lostcoastwithoutamar.png'"
+    onmouseout="this.src='/lostcoast.png'"
+    alt="Amar at the Lost Coast"
+  />
+
+  <HomeIntro />
+
+  <h2 class="subsection">
+    Selected Publications <span class="more">(<a href="/research/">see all</a>)</span>
+  </h2>
+  <PubList items={selectedPubs} showDescriptions={false} showEqualNote={false} />
+</Base>

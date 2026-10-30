@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { Content as BlogIntro } from '../../content/blog-intro.mdx';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+---
+<Base title="Blog — Amar Shah" active="posts" robots="noai, noimageai">
+  <BlogIntro />
+  <ul class="post-list">
+    {posts.map((p) => (
+      <li>
+        <time>{fmt(p.data.date)}</time>
+        <a href={`/posts/${p.id}/`}>{p.data.title}</a>
+      </li>
+    ))}
+  </ul>
+</Base>

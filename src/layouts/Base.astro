@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  active?: string;
+  robots?: string;
+}
+
+const { title = 'Amar Shah', active = '', robots } = Astro.props;
+
+const nav = [
+  { name: 'Home', href: '/', key: 'home' },
+  { name: 'Publications', href: '/research/', key: 'research' },
+  { name: 'Teaching', href: '/teaching/', key: 'teaching' },
+  { name: 'Blog', href: '/posts/', key: 'posts' },
+  { name: 'Miscellaneous', href: '/miscellaneous/', key: 'misc' },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {robots && <meta name="robots" content={robots} />}
+    {robots && <meta name="googlebot" content={robots} />}
+    <link rel="icon" type="image/png" href="/images/psi.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <nav class="sidebar">
+        <ul>
+          {nav.map((item) => (
+            <li>
+              <a href={item.href} class={item.key === active ? 'active' : ''}>{item.name}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <main class="body">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

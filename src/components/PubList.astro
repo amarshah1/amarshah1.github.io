@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  items: CollectionEntry<'publications'>[];
+  showDescriptions?: boolean;
+  showEqualNote?: boolean;
+}
+
+const { items, showDescriptions = true, showEqualNote = true } = Astro.props;
+const hasEqual = showEqualNote && items.some(({ data }) => data.authors.some((a) => a.equal));
+
+function splitLastWord(s: string) {
+  const i = s.trimEnd().lastIndexOf(' ');
+  if (i === -1) return { head: '', tail: s };
+  return { head: s.slice(0, i + 1), tail: s.slice(i + 1) };
+}
+---
+<div class="pubs">
+  {items.map(({ data }) => (
+    <div class="pub">
+      <div class="pub-venue">
+        {data.venueUrl ? <a href={data.venueUrl}>{data.venue}</a> : data.venue}
+      </div>
+      <div class="pub-body">
+        <div class="pub-title">
+          {data.pdf || data.bibtex ? (() => {
+            const { head, tail } = splitLastWord(data.title);
+            return (<>
+              {head}<span class="pub-title-end">{tail}
+                {data.pdf && <>&nbsp;<a class="pub-pdf" href={data.pdf}>[pdf]</a></>}
+                {data.bibtex && <>&nbsp;<details class="pub-bibtex"><summary>[bibtex]</summary><pre>{data.bibtex}</pre></details></>}
+              </span>
+            </>);
+          })() : data.title}
+        </div>
+        <div class="pub-authors">
+          {data.authors.map((a, i) => (
+            <>
+              {i > 0 && ', '}
+              {a.url ? <a href={a.url}>{a.name}</a> : <span>{a.name}</span>}
+              {a.equal && <sup class="pub-equal">*</sup>}
+            </>
+          ))}
+        </div>
+        {showDescriptions && data.description && <div class="pub-desc">{data.description}</div>}
+      </div>
+    </div>
+  ))}
+  {hasEqual && <p class="pubs-note"><sup class="pub-equal">*</sup>Equal contribution</p>}
+</div>

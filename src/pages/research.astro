@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import PubList from '../components/PubList.astro';
+import { Content as ResearchIntro } from '../content/research-intro.mdx';
+import { getCollection } from 'astro:content';
+
+const pubs = (await getCollection('publications')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+<Base title="Publications — Amar Shah" active="research">
+  <ResearchIntro />
+  <PubList items={pubs} />
+</Base>

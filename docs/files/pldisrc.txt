@@ -1,1 +1,0 @@
-“An Eager SMT Solver for Algebraic Data Type Queries”. Programming Languages Design & Implementation Student Research Competition (PLDI SRC). July 2023.
