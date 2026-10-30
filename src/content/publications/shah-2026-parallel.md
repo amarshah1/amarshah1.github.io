@@ -12,14 +12,14 @@ year: 2026
 pdf: "/papers/parallelcc-paper.pdf"
 bibtex: |
   @inproceedings{kent2026parallelizing,
-  author    = {Kent, Zachary and Shah, Amar},
-  title     = {Parallelizing Congruence Closure},
-  booktitle = {Proceedings of the 26th Conference on Formal Methods in Computer-Aided Design (FMCAD)},
-  editor    = {Dutertre, Bruno and K{\"o}nighofer, Bettina},
-  pages     = {189--199},
-  year      = {2026},
-  publisher = {TU Wien Academic Press},
-  doi       = {10.34727/2026/isbn.978-3-85448-093-8_25}
+    author    = {Kent, Zachary and Shah, Amar},
+    title     = {Parallelizing Congruence Closure},
+    booktitle = {Proceedings of the 26th Conference on Formal Methods in Computer-Aided Design (FMCAD)},
+    editor    = {Dutertre, Bruno and K{\"o}nighofer, Bettina},
+    pages     = {189--199},
+    year      = {2026},
+    publisher = {TU Wien Academic Press},
+    doi       = {10.34727/2026/isbn.978-3-85448-093-8_25}
   }
 selected: true
 order: 0

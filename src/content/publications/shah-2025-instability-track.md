@@ -11,13 +11,18 @@ authors:
 venue: "SMT '25"
 venueUrl: "https://smt-workshop.cs.uiowa.edu/2025/"
 year: 2025
-pdf: "/papers/instability-track-paper.pdf"
+pdf: "https://ceur-ws.org/Vol-4008/SMT_paper19.pdf"
 bibtex: |
   @inproceedings{shah2025instability,
     author    = {Shah, Amar and Zhou, Yi and Heule, Marijn and Parno, Bryan},
     title     = {Instability Track for SMT-COMP},
-    booktitle = {International Workshop on Satisfiability Modulo Theories (SMT)},
-    year      = {2025}
+    booktitle = {Joint Proceedings of the 23rd International Workshop on Satisfiability Modulo Theories (SMT) and the 16th Pragmatics of SAT International Workshop (PoS)},
+    editor    = {Hoenicke, Jochen and Janota, Mikol{\'a}{\v{s}} and Niemetz, Aina and Tourret, Sophie},
+    series    = {CEUR Workshop Proceedings},
+    volume    = {4008},
+    pages     = {148--152},
+    year      = {2025},
+    url       = {https://ceur-ws.org/Vol-4008/SMT_paper19.pdf}
   }
 selected: false
 order: 4

@@ -142,7 +142,7 @@ h2.subsection .more a:hover { color: var(--link-hover); }
 }
 .pub-venue a { color: var(--muted); }
 .pub-venue a:hover { color: var(--link-hover); }
-.pub-body { flex: 1; }
+.pub-body { flex: 1; min-width: 0; }
 .pub-title { font-style: italic; color: #111; }
 .pub-title-end { white-space: nowrap; }
 .pub-pdf {
@@ -182,8 +182,8 @@ h2.subsection .more a:hover { color: var(--link-hover); }
   line-height: 1.45;
   font-style: normal;
   color: #333;
-  white-space: pre;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 .pub-authors { color: var(--muted); font-size: 15px; margin-top: 2px; }
 .pub-authors a { color: var(--muted); text-decoration: none; }
