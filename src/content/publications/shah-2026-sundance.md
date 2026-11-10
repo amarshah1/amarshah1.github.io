@@ -12,7 +12,7 @@ authors:
   - name: "Bryan Parno"
     url: "https://www.andrew.cmu.edu/user/bparno/"
   - name: "Bruno Dutertre"
-venue: "arXiv '26"
+venue: "Under Submission"
 venueUrl: "https://arxiv.org/abs/2611.05668"
 year: 2026
 pdf: "https://arxiv.org/pdf/2611.05668"
