@@ -22,6 +22,6 @@ bibtex: |
     doi       = {10.34727/2026/isbn.978-3-85448-093-8_25}
   }
 selected: true
-order: 0
+order: 1
 description: "We propose the first two parallel algorithms for congruence closure and discuss how it can be used in SMT solving and equality saturation workloads."
 ---

@@ -20,6 +20,6 @@ bibtex: |
     year      = {2026}
   }
 selected: false
-order: 1
+order: 2
 description: "We discuss how relational e-matching, a technique from equality saturation, can be applied to SMT solvers."
 ---

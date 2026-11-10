@@ -25,6 +25,6 @@ bibtex: |
     url       = {https://ceur-ws.org/Vol-4008/SMT_paper19.pdf}
   }
 selected: false
-order: 4
+order: 5
 description: "We propose a new track to the annual SMT competition to measure instability, i.e. the performance variation on syntactic mutations."
 ---

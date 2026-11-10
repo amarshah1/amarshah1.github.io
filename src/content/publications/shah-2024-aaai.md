@@ -22,6 +22,6 @@ bibtex: |
     doi       = {10.1609/aaai.v38i8.28649}
   }
 selected: false
-order: 5
+order: 6
 description: "We propose a new SMT solving technique for the theory of Algebraic Datatypes involving an eager reduction to uninterpreted functions. We implement this in a solver and outperform the state-of-the-art."
 ---

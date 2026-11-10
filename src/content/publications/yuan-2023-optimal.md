@@ -23,6 +23,6 @@ bibtex: |
     doi       = {10.1016/j.cnsns.2023.107701}
   }
 selected: false
-order: 6
+order: 7
 description: "We study the simulation of rare transitions with an optimal controller. We prove that adding an optimal controller leads to the generation of transitions exclusively and allows us to estimate the transition rate with reasonable accuracy."
 ---

@@ -24,6 +24,6 @@ bibtex: |
     doi       = {10.34727/2025/isbn.978-3-85448-084-6_17}
   }
 selected: true
-order: 2
+order: 3
 description: "We describe how to learn short, effective clauses in a strong proof system for propositional logic. This shows a meaningful speedup on a number of SAT benchmarks."
 ---

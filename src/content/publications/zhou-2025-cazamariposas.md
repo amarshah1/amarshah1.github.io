@@ -24,7 +24,7 @@ bibtex: |
     publisher = {Springer},
     doi       = {10.1007/978-3-031-99984-0_5}
   }
-selected: true
-order: 3
+selected: false
+order: 4
 description: "We devise a debugging approach for unstable SMT queries that involves isolating and fixing problematic quantifiers."
 ---
